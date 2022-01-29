@@ -49,39 +49,6 @@ $ npm run test:cov
 localhost:3003/api/
 ```
 
-## Init a new project by clonning this repo
-
-Go to the `.env.example` and edit it:
-
-Go to the `env.yml` and edit:
-
-- Every entry of `hexagonal-nest` to your project name.
-- Every entry of `hexagonal_nest` to your project name.
-
-Go to the `DockerfileLocal` and edit:
-
-- every entry of `hexagonal-nest-ms` to your project name
-
-Go to the `docker-compose.yml` and edit:
-
-- line `6` change to project name for `database container name`
-- line `20` change to project name for `migration container name`
-- line `28` change to project name for `microservice container name`
-- line `44` change to project name for `volume name for microservice container name`
-
-Delete the `test` module:
-
-- Delete the `test` folder under `./src/modules/test` and all files on the folder
-- Delete the `TestModule` mention and import on `app.module`
-
-Delete the migrations file `./migrations/sql/V2021.09.13.30.0__Init_tables.sql`
-
-Go to file `./src/main.ts` and edit:
-
-- the swagger `setTitle()` title to your project name (line: `27`)
-- the swagger `setDescription()` title to your project description (line: `28`)
-- Delete the swagger `addTag('base')` and start adding your own tags
-
 ## Folder Structure
 
 Based on the [hexagonal architecture (see Architecture
